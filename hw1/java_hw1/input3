@@ -1,0 +1,41 @@
+Here is a detailed example of a complete makefile for a relatively small project consisting of several pieces.
+# Some variables needed to access private libraries for this project
+HOME_DIR = /home/z123456
+INCLUDES = -I$(HOME_DIR)/include
+LIB_DIR = $(HOME_DIR)/lib/
+
+# Standard compiler variables
+CC = g++
+CCFLAGS = -Wall -g
+
+
+# Rules start here
+
+pxform: pxform.o similar.o translation.o perspective.o incremental.o \
+        panoramic.o
+        $(CC) -o pxform $(CCFLAGS) pxform.o \
+	        panoramic.o incremental.o perspective.o similar.o \
+                translation.o \
+                -L$(LIB_DIR) -lrender -lmatrix -lm
+
+incremental.o: incremental.cc incremental.h pxform.h
+        $(CC) -c $(CCFLAGS) $(INCLUDES) incremental.cc
+
+panoramic.o: panoramic.cc panoramic.h pxform.h
+        $(CC) -c $(CCFLAGS) $(INCLUDES) panoramic.cc
+
+perspective.o: perspective.cc perspective.h pxform.h
+        $(CC) -c $(CCFLAGS) $(INCLUDES) perspective.cc
+
+pxform.o: pxform.cc panoramic.h incremental.h perspective.h similar.h \
+                translation.h pxform.h
+        $(CC) -c $(CCFLAGS) $(INCLUDES) pxform.cc
+
+similar.o: similar.cc similar.h pxform.h
+        $(CC) -c $(CCFLAGS) $(INCLUDES) similar.cc
+
+translation.o: translation.cc translation.h pxform.h
+        $(CC) -c $(CCFLAGS) $(INCLUDES) translation.cc
+
+clean:
+        -rm *.o pxform
