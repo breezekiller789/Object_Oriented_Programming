@@ -1,3 +1,6 @@
+//  type $make
+//       $./hw1 "string"
+//  The program will print out all the characters apeared in the string
 #include "header.h"
 
 using namespace std;
