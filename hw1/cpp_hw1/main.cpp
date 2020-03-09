@@ -2,22 +2,22 @@
 
 using namespace std;
 
-struct lnode *NewNode();
-void Insert(struct lnode *head, char ptr);
-void Traverse_List(struct lnode *head);
-
 int main(int argc, char **argv){
-    char *line, *ptr;
+    char *ptr;
     int len;
     struct lnode *head = NewNode();
-    line = (char *)malloc(sizeof(char) * MaxLine);
-    while(cin.getline(line, MaxLine)){
-        len = strlen(line);
-        ptr = line;
+
+    //  The upperbound is argc, treat each argument as a string, and Insert every
+    //  character one by one
+    for(int i=1; i<argc; i++){
+        len = strlen(argv[i]);
+        ptr = strdup(argv[i]);
+        //  Do insert
         for(int i=0; i<len; i++, ptr++){
             Insert(head, *ptr);
         }
     }
+    //  Print out the answers
     Traverse_List(head);
     return 0;
 }

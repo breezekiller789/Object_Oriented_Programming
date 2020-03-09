@@ -1,4 +1,4 @@
-package com.yiibai;
+// package com.yiibai;
 
 import java.io.DataInput;
 import java.io.BufferedReader;
