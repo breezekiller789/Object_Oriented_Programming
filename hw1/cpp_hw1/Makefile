@@ -9,7 +9,7 @@ $(EXE) : $(OBJ)
 	$(CC) -o $@ $^
 
 %.o : %.cpp
-	$(CC) -c -o $@ $< $(CCFLAGS)
+	$(CC) -o $@ $< $(CCFLAGS)
 
 .PHONY: clean
 clean :
