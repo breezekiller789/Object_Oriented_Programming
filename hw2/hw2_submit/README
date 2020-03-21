@@ -1,0 +1,21 @@
+執行方法：
+
+    首先打開main.cpp，在第7行，可以指定要讀入哪個檔案，在fopen()裡的第一個參數
+
+    打入檔案的路徑，修改完之後存檔，並在command line打入$make，將會產生一個可
+
+    執行檔hw2.out，打入$./hw2.out即可執行程式，打入$make clean可以清掉所有object
+
+    file跟.out檔。
+
+注意事項：
+    
+    若要更改吃進來的input檔案，改完之後必須要重新make。
+
+備註：
+    
+    程式相關的註解我都寫在程式裡面，然後我的Makefile有寫兩種版本，default是一
+
+    般的用法，註解起來的是GNU版本的Makefile，若要使用GNU版本，就把7~14行註解掉
+
+    ，然後把16~23行的註解打開，就可以使用gmake，個人還是習慣寫GNU Makefile。
