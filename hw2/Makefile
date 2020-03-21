@@ -4,23 +4,14 @@ SRC = $(wildcard *.cpp)
 OBJ = $(patsubst %.cpp, %.o, $(SRC))
 EXE = hw2
 
-all : main.o func.o
-	g++ -o hw2 main.o func.o
+.SECONDARY : $(OBJ)
+.PHONY : clean
 
-main.o : main.cpp header.h
-	g++ main.cpp -c
+$(EXE) : $(OBJ)
+	$(CC) -o $@ $^
 
-func.o : func.cpp header.h
-	g++ func.cpp -c
-
-# .SECONDARY : $(OBJ)
-# .PHONY : clean
-
-# $(EXE) : $(OBJ)
-# 	$(CC) -o $@ $^
-
-# %.o : %.cpp
-# 	$(CC) -o $@ $< $(CCFLAGS)
+%.o : %.cpp
+	$(CC) -o $@ $< $(CCFLAGS)
 
 clean :
 	rm *.o hw2
