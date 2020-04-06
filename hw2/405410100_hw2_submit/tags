@@ -1,0 +1,14 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Average	func.cpp	/^void Average(int *Array, int List_Size, float Avg_Result[3]){$/;"	f
+Display	func.cpp	/^void Display(float Avg_Result[3], int Max){$/;"	f
+FAILED	header.h	/^#define FAILED /;"	d
+Large	func.cpp	/^int Large(int *Array, int List_Size){$/;"	f
+MaxLine	header.h	/^#define MaxLine /;"	d
+ReadList	func.cpp	/^int ReadList(FILE *fp, int **Array){$/;"	f
+SUCCESS	header.h	/^#define SUCCESS /;"	d
+main	main.cpp	/^int main(int argc, char *argv[]) {$/;"	f

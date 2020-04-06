@@ -4,7 +4,7 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
     
-    FILE *fp = fopen("./Input_Files/input1.txt", "r");
+    FILE *fp = fopen("./Input_Files/input3.txt", "r");
     int *Array, List_Size, Max;
     float Avg_Result[3]={0};
 
