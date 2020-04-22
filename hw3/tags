@@ -1,0 +1,37 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Area	func.cpp	/^double Diamond::Area(void){$/;"	f	class:Diamond
+BLUE	Makefile	/^BLUE = \\033[1;34m$/;"	m
+Border	header.h	/^    char Border;$/;"	m	class:Diamond
+CC	Makefile	/^CC = g++$/;"	m
+CCFLAGS	Makefile	/^CCFLAGS = -g -c$/;"	m
+Diamond	header.h	/^    Diamond(int size): Diamond_Size(size){$/;"	f	class:Diamond
+Diamond	header.h	/^    Diamond(int size, char border):Diamond_Size(size), Border(border), Fill('*'){$/;"	f	class:Diamond
+Diamond	header.h	/^    Diamond(int size, char border, char fill):Diamond_Size(size), Border(border),$/;"	f	class:Diamond
+Diamond	header.h	/^class Diamond{$/;"	c
+Diamond_Size	header.h	/^    int Diamond_Size;$/;"	m	class:Diamond
+Draw	func.cpp	/^void Diamond::Draw(void){$/;"	f	class:Diamond
+EXE	Makefile	/^EXE = hw3$/;"	m
+Fill	header.h	/^    char Fill;$/;"	m	class:Diamond
+GREEN	Makefile	/^GREEN = \\033[1;32m$/;"	m
+GetBorder	func.cpp	/^char Diamond::GetBorder(void){$/;"	f	class:Diamond
+GetFill	func.cpp	/^char Diamond::GetFill(void){$/;"	f	class:Diamond
+GetSize	func.cpp	/^int Diamond::GetSize(void){$/;"	f	class:Diamond
+Grow	func.cpp	/^void Diamond::Grow(void){$/;"	f	class:Diamond
+MaxLine	header.h	/^#define MaxLine /;"	d
+NC	Makefile	/^NC = \\033[1;0m$/;"	m
+OBJ	Makefile	/^OBJ = $(patsubst %.cpp, %.o, $(SRC))$/;"	m
+Perimeter	func.cpp	/^int Diamond::Perimeter(void){$/;"	f	class:Diamond
+RED	Makefile	/^RED = \\033[1;31m$/;"	m
+SRC	Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+SetBorder	func.cpp	/^void Diamond::SetBorder(char key){$/;"	f	class:Diamond
+SetFill	func.cpp	/^void Diamond::SetFill(char key){$/;"	f	class:Diamond
+Shrink	func.cpp	/^void Diamond::Shrink(void){$/;"	f	class:Diamond
+Summary	func.cpp	/^void Diamond::Summary(void){$/;"	f	class:Diamond
+YELLOW	Makefile	/^YELLOW = \\033[1;33m$/;"	m
+info	func.cpp	/^void Diamond::info(void){$/;"	f	class:Diamond
+main	main.cpp	/^int main(int argc, char *argv[]){$/;"	f
