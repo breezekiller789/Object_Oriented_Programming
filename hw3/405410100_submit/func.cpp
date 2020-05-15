@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//  draw the shape of diamond with size
 void Diamond::Draw(void){
     int space = this->Diamond_Size - 1;  
     int n = this->Diamond_Size;
@@ -62,6 +63,7 @@ void Diamond::Draw(void){
     }  
 }
 
+//  Minus size by 1, if over 39, leave it 39, if under 1, leave it 1
 void Diamond::Shrink(void){
     int cnt = this->Diamond_Size;
     if(cnt-1 > 39){
@@ -75,6 +77,7 @@ void Diamond::Shrink(void){
     }
 }
 
+//  Plus size by 1, if over 39, leave it 39, if under 1, leave it 1
 void Diamond::Grow(void){
     int cnt = this->Diamond_Size;
     if(cnt+1 > 39){
@@ -88,10 +91,12 @@ void Diamond::Grow(void){
     }
 }
 
+//  return size
 int Diamond::GetSize(void){
     return this->Diamond_Size;
 }
 
+//  calculate total length of diamond
 int Diamond::Perimeter(void){
     int perimeter;
     int area_long = this->Diamond_Size;
@@ -101,14 +106,17 @@ int Diamond::Perimeter(void){
     return area_long - area_short + 4;
 }
 
+//  calculate the area of the diamond
 double Diamond::Area(void){
     int side_length = this->Diamond_Size;
     double area = pow(3, 0.5)/4 * pow(side_length, 2) * 2;
     return area;
 }
 
+//  modify border
 void Diamond::SetBorder(char key){
     int c = key;
+    //  if value over 126 or under 33, then it is invalid
     if(c>=33 && c<=126){
         this->Border = key;
     }
@@ -117,8 +125,10 @@ void Diamond::SetBorder(char key){
     }
 }
 
+//  modify fill
 void Diamond::SetFill(char key){
     int c = key;
+    //  if value over 126 or under 33, then it is invalid
     if(c>=33 && c<=126){
         this->Fill = key;
     }
@@ -127,6 +137,7 @@ void Diamond::SetFill(char key){
     }
 }
 
+//  print out the information of current value
 void Diamond::Summary(void){
     cout << "Size of diamond's side = " << this->Diamond_Size << " units." << endl;
     cout << "Perimeter of diamond = " << this->Perimeter() << " units." << endl;
@@ -135,6 +146,7 @@ void Diamond::Summary(void){
     this->Draw();
 }
 
+//  i made it my self, for debugging...
 void Diamond::info(void){
     cout << "==========" << endl;
     cout << "Size = " << this->Diamond_Size << endl;
@@ -144,10 +156,12 @@ void Diamond::info(void){
     cout << "Area = " << this->Area() << endl;
 }
 
+//  return border character
 char Diamond::GetBorder(void){
     return this->Border;
 }
 
+//  return fill character
 char Diamond::GetFill(void){
     return this->Fill;
 }

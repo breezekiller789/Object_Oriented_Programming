@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC = g++$/;"	m
+CCFLAGS	Makefile	/^CCFLAGS = -Wall -Werror -g -c -O3$/;"	m
+Clear	func.cpp	/^void LinkedList::Clear(){$/;"	f	class:LinkedList
+Delete	func.cpp	/^void LinkedList::Delete(int c, int e){$/;"	f	class:LinkedList
+EXE	Makefile	/^EXE = hw4$/;"	m
+FindCentroid	func.cpp	/^double *Polygon::FindCentroid() const{$/;"	f	class:Polygon
+LinkedList	func.cpp	/^LinkedList::LinkedList(int *c, int *e, int num){$/;"	f	class:LinkedList
+LinkedList	header.h	/^        LinkedList():first(0){$/;"	f	class:LinkedList
+LinkedList	header.h	/^class LinkedList{$/;"	c
+ListNode	header.h	/^        ListNode():coef(0), exp(0), next(0){};$/;"	f	class:ListNode
+ListNode	header.h	/^        ListNode(int c, int e):coef(c), exp(e), next(0){};$/;"	f	class:ListNode
+ListNode	header.h	/^class ListNode{$/;"	c
+MaxLine	header.h	/^#define MaxLine /;"	d
+OBJ	Makefile	/^OBJ = $(patsubst %.cpp, %.o, $(SRC))$/;"	m
+Polygon	header.h	/^    Polygon(): _m(0), _n(0){$/;"	f	class:Polygon
+Polygon	header.h	/^    Polygon(const Polygon &cp){$/;"	f	class:Polygon
+Polygon	header.h	/^    Polygon(unsigned int m, unsigned int n): _m(m), _n(n){$/;"	f	class:Polygon
+Polygon	header.h	/^class Polygon{$/;"	c
+PrintList	func.cpp	/^void LinkedList::PrintList(){$/;"	f	class:LinkedList
+PrintPoints	func.cpp	/^void PrintPoints (Polygon p) {$/;"	f
+Push_back	func.cpp	/^void LinkedList::Push_back(int c, int e){$/;"	f	class:LinkedList
+Push_front	func.cpp	/^void LinkedList::Push_front(int c, int e){$/;"	f	class:LinkedList
+SRC	Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+_m	header.h	/^    unsigned int _m;$/;"	m	class:Polygon
+_n	header.h	/^    unsigned int _n;$/;"	m	class:Polygon
+_point	header.h	/^    double **_point;$/;"	m	class:Polygon
+add	func.cpp	/^void LinkedList::add(int c, int e){$/;"	f	class:LinkedList
+coef	header.h	/^        int coef;$/;"	m	class:ListNode
+differential	func.cpp	/^void LinkedList::differential(){$/;"	f	class:LinkedList
+exp	header.h	/^        int exp;$/;"	m	class:ListNode
+first	header.h	/^        ListNode *first;            \/\/ list的第一個node$/;"	m	class:LinkedList
+getDimension	func.cpp	/^const int Polygon::getDimension() const {$/;"	f	class:Polygon
+getNumOfPoints	func.cpp	/^const int Polygon::getNumOfPoints() const{$/;"	f	class:Polygon
+getValue	func.cpp	/^const double Polygon::getValue (unsigned int m, unsigned int n) const {$/;"	f	class:Polygon
+main	main.cpp	/^int main(int argc, char *argv[]){$/;"	f
+next	header.h	/^        ListNode *next;$/;"	m	class:ListNode
+setValue	func.cpp	/^bool Polygon::setValue (double & value, unsigned int m, unsigned int n) {$/;"	f	class:Polygon
+~LinkedList	header.h	/^        ~LinkedList(){$/;"	f	class:LinkedList
+~Polygon	header.h	/^    ~Polygon(){$/;"	f	class:Polygon
