@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Add	func.cpp	/^char *Bigint::Add(const char *s1, const char *s2){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(const Bigint &cp){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(int x0){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1, int x2){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1, int x2, int x3){$/;"	f	class:Bigint
+Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1, int x2, int x3, int x4){$/;"	f	class:Bigint
+Bigint	header.h	/^class Bigint{$/;"	c
+Combine	func.cpp	/^void Bigint::Combine(){$/;"	f	class:Bigint
+Final_String	header.h	/^    char Final_String[46];$/;"	m	class:Bigint
+Init_Array	func.cpp	/^void Bigint::Init_Array(){$/;"	f	class:Bigint
+MaxLine	header.h	/^#define MaxLine /;"	d
+main	main.cpp	/^int main(int argc, char *argv[]){$/;"	f
+operator +	func.cpp	/^Bigint Bigint::operator+(const Bigint &obj_left){$/;"	f	class:Bigint
+operator <<	func.cpp	/^ostream & operator<<(ostream &os, const Bigint &in){$/;"	f
+operator >>	func.cpp	/^istream & operator>>(istream &is, Bigint &in){$/;"	f
+size	header.h	/^    int size;$/;"	m	class:Bigint
+v	header.h	/^    char v[5][10];$/;"	m	class:Bigint
+x	header.h	/^    int x[5];$/;"	m	class:Bigint
+~Bigint	header.h	/^    ~Bigint(){$/;"	f	class:Bigint

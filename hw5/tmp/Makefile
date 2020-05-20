@@ -15,13 +15,13 @@ NC = \033[1;0m
 
 $(EXE) : $(OBJ)
 	$(CC) -o $@ $^
-	@echo "$(GREEN)Done$(NC)"
+	@echo "$(GREEN)Done!$(NC)"
 
 %.o : %.cpp
-	@echo "$(RED)Compiling$(NC) $(YELLOW)$<...$(NC)"
+	@echo "$(RED)Compiling...$(NC)"
 	$(CC) -o $@ $< $(CCFLAGS) -I $(CURDIR)
 
 clean :
 	@echo "$(BLUE)Cleaning...$(NC)"
 	rm $(OBJ) $(EXE)
-	@echo "$(YELLOW)Done$(NC)"
+	@echo "$(YELLOW)Done!$(NC)"

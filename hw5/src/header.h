@@ -31,14 +31,24 @@ public:
     Bigint(const Bigint &);
     //  Destructor
     ~Bigint(){
-        cout << "Destructor..." << endl;
     }
     Bigint operator+(const Bigint &);
-
+    Bigint operator+(int);
+    Bigint operator-(const Bigint &);
+    Bigint operator-(int);
+    bool operator==(const Bigint &) const;
+    bool operator!=(const Bigint &) const;
+    bool operator>(const Bigint &) const;
+    bool operator<(const Bigint &) const;
+    bool operator>=(const Bigint &)const;
+    bool operator<=(const Bigint &)const;
+    
 
     void Combine();
     void Init_Array();
     char *Add(const char *, const char *);
+    char *Minus(const char *, const char *);
+    char *Int2String_Conversion(int);
 
     friend ostream & operator<<(ostream &os, const Bigint &in);
     friend istream & operator>>(istream &is, Bigint &in);
