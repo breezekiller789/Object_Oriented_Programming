@@ -1,19 +1,49 @@
+#include <iostream> 
 #include "header.h"
-
 using namespace std;
-
-int main(int argc, char *argv[]){
-    Bigint x(999999999, 24123, 111, 33333333, 123456789);
-    Bigint y(321000, 5313, 111, 3119033, 123456789);
-    Bigint n(000, 000, 000, 000, 000);
-    Bigint m(000, 000, 000, 000, 000);
-    Bigint a(111111111, 111111111, 111111111, 111111111, 111111111);
-    Bigint b(999999999, 999999999, 999999999, 999999999, 999999999);
-    Bigint z = m - n;
-    cout << z << endl;
-    /* cout << x << endl; */
-    /* cout << y << endl; */
-    /* cout << n << endl; */
-    /* cout << z << endl; */
+void test1() {
+    Bigint x; Bigint y;
+    if (x == y)
+        cout << x << " is equal to " << y << "." << endl;
+    if (x != y)
+        cout << x << " is not equal to " << y << "." << endl;
+    if (x > y)
+        cout << x << " is larger than " << y << "." << endl;
+    if (x >= y)
+        cout << x << " is larger than or equal to " << y << "." << endl;
+    if (x < y)
+        cout << x << " is smaller than " << y << "." << endl;
+    if (x <= y)
+        cout << x << " is smaller than or equal to " << y << "." << endl;
+    Bigint x1(123456789, 111, 111, 111, 111);
+    Bigint y1(111111111, 111, 111, 111, 111);
+    if (x1 == y1)
+        cout << x1 << " is equal to " << y1 << "." << endl;
+    if (x1 != y1)
+        cout << x1 << " is not equal to " << y1 << "." << endl;
+    if (x1 > y1)
+        cout << x1 << " is larger than " << y1 << "." << endl;
+    if (x1 >= y1)
+        cout << x1 << " is larger than or equal to " << y1 << "." << endl;
+    if (x1 < y1)
+        cout << x1 << " is smaller than " << y1 << "." << endl;
+    if (x1 <= y1)
+        cout << x1 << " is smaller than or equal to " << y1 << "." << endl;
+    Bigint x2(999999999, 999999999, 999999999, 20);
+    cout << x2 << "+1 = " << x2 + 1 << endl;
+    Bigint y2(000000000, 000000000, 000000000, 000000000, 000000001);
+    cout << y2 << "-1 = " << y2-1 << endl;
+    cout << "x1 + x2 - y2 + 1 = " << x1+x2-y2+1 << endl;
+    for (int i=0; i<3; i++) {
+        Bigint x, y;
+        cin >> x >> y;
+        cout << "x = " << x << endl;
+        cout << "y = " << y << endl;
+        cout << "x+y=" << x+y << endl;
+        cout << "x-y=" << x-y << endl;
+    }
+}
+int main() {
+    test1();
     return 0;
 }

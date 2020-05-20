@@ -13,18 +13,25 @@ Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1, int x2){$/;"	f	class:Bigint
 Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1, int x2, int x3){$/;"	f	class:Bigint
 Bigint	func.cpp	/^Bigint::Bigint(int x0, int x1, int x2, int x3, int x4){$/;"	f	class:Bigint
 Bigint	header.h	/^class Bigint{$/;"	c
+CC	Makefile	/^CC = g++$/;"	m
+CCFLAGS	Makefile	/^CCFLAGS = -Wall -Werror -g -c -O3$/;"	m
 Combine	func.cpp	/^void Bigint::Combine(){$/;"	f	class:Bigint
+EXE	Makefile	/^EXE = hw5$/;"	m
 Final_String	header.h	/^    char Final_String[46];$/;"	m	class:Bigint
 Init_Array	func.cpp	/^void Bigint::Init_Array(){$/;"	f	class:Bigint
 Int2String_Conversion	func.cpp	/^char *Bigint::Int2String_Conversion(int amount){$/;"	f	class:Bigint
 MaxLine	header.h	/^#define MaxLine /;"	d
 Minus	func.cpp	/^char *Bigint::Minus(const char *s1, const char *s2){$/;"	f	class:Bigint
-main	main.cpp	/^int main(int argc, char *argv[]){$/;"	f
+OBJ	Makefile	/^OBJ = $(patsubst %.cpp, %.o, $(SRC))$/;"	m
+SRC	Makefile	/^SRC = $(wildcard *.cpp)$/;"	m
+main	main.cpp	/^int main() {$/;"	f
 operator !=	func.cpp	/^bool Bigint::operator!=(const Bigint &in) const{$/;"	f	class:Bigint
 operator +	func.cpp	/^Bigint Bigint::operator+(const Bigint &obj_left){$/;"	f	class:Bigint
-operator +	func.cpp	/^Bigint Bigint::operator+(int amount){$/;"	f	class:Bigint
+operator +	func.cpp	/^Bigint operator+(Bigint in, int amount){$/;"	f
+operator +	func.cpp	/^Bigint operator+(int amount, Bigint in){$/;"	f
 operator -	func.cpp	/^Bigint Bigint::operator-(const Bigint &obj_left){$/;"	f	class:Bigint
-operator -	func.cpp	/^Bigint Bigint::operator-(int amount){$/;"	f	class:Bigint
+operator -	func.cpp	/^Bigint operator-(Bigint in, int amount){$/;"	f
+operator -	func.cpp	/^Bigint operator-(int amount, Bigint in){$/;"	f
 operator <	func.cpp	/^bool Bigint::operator<(const Bigint &in) const{$/;"	f	class:Bigint
 operator <<	func.cpp	/^ostream & operator<<(ostream &os, const Bigint &in){$/;"	f
 operator <=	func.cpp	/^bool Bigint::operator<=(const Bigint &in) const{$/;"	f	class:Bigint
@@ -33,6 +40,7 @@ operator >	func.cpp	/^bool Bigint::operator>(const Bigint &in) const{$/;"	f	clas
 operator >=	func.cpp	/^bool Bigint::operator>=(const Bigint &in) const{$/;"	f	class:Bigint
 operator >>	func.cpp	/^istream & operator>>(istream &is, Bigint &in){$/;"	f
 size	header.h	/^    int size;$/;"	m	class:Bigint
+test1	main.cpp	/^void test1() {$/;"	f
 v	header.h	/^    char v[5][10];$/;"	m	class:Bigint
 x	header.h	/^    int x[5];$/;"	m	class:Bigint
 ~Bigint	header.h	/^    ~Bigint(){$/;"	f	class:Bigint
