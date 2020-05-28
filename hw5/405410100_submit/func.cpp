@@ -74,8 +74,6 @@ Bigint::Bigint(const Bigint &cp){
     strcpy(this->Final_String, cp.Final_String);
 }
 
-
-//  自己實作setw, setfill，稍微複雜，但是挺簡單的。
 //  我的x[]是整數型態，存的是整數，v是二維字元陣列，拿來存字串用的，舉個例：
 //  x[0] = 123
 //  v[0] = 000000123
@@ -337,9 +335,39 @@ bool Bigint::operator==(const Bigint &in) const{
     return true;
 }
 
+bool operator==(Bigint &in, int amount){
+    char *s1 = strdup(in.Final_String);
+    char *s2 = in.Int2String_Conversion(amount);
+    if(strcmp(s1, s2) == 0){
+        return true;
+    }
+    else
+        return false;
+    return true;
+}
+
+bool operator==(int amount, Bigint &in){
+    char *s1 = strdup(in.Final_String);
+    char *s2 = in.Int2String_Conversion(amount);
+    if(strcmp(s1, s2) == 0){
+        return true;
+    }
+    else
+        return false;
+    return true;
+}
+
 //  跟上課投影片一樣，如果等於不成立就代表不等於。
 bool Bigint::operator!=(const Bigint &in) const{
     return !(in == *this);
+}
+
+bool operator!=(Bigint &in, int amount){
+    return !(in == amount);
+}
+
+bool operator!=(int amount, Bigint &in){
+    return !(amount == in);
 }
 
 bool Bigint::operator>(const Bigint &in) const{
@@ -347,7 +375,7 @@ bool Bigint::operator>(const Bigint &in) const{
         return true;
     }
     //  這個函式是要判斷大於，不是大於等於，如果會走到這一步，代表這兩個字串是
-    //  等於，要回傳false
+    //  等於或者小於，要回傳false
     return false;
 }
 
@@ -356,7 +384,7 @@ bool Bigint::operator<(const Bigint &in) const{
         return true;
     }
     //  這個函式是要判斷小於，不是小於等於，如果會走到這一步，代表這兩個字串是
-    //  等於，要回傳false
+    //  等於或大於，要回傳false
     return false;
 }
 
@@ -379,8 +407,8 @@ bool Bigint::operator<=(const Bigint &in) const{
 }
 
 //  支援<<來輸出字串，因為我的實作方法的關係，前面可能會有很多零，如果數小於45
-//  位數的話，所以一開始會先把前面沒有意義的零拿掉，再來下面的if是檢查零，因為
-//  如果值是零，我會存45個零，這邊就直接os << '0'。
+//  位數的話前面會有一堆零，所以一開始會先把前面沒有意義的零拿掉，再來下面的if
+//  是檢查零，因為如果值是零，我會存45個零，這邊就直接os << '0'。
 ostream & operator<<(ostream &os, const Bigint &in){
     int i=0;
     while(in.Final_String[i] == '0'){

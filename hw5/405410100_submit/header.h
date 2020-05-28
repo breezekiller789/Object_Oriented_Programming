@@ -38,12 +38,16 @@ public:
     Bigint operator-(const Bigint &);       //支援 obj1-obj2-obj3...
     friend Bigint operator-(Bigint, int);   //支援 obj1-1-2-3...
     friend Bigint operator-(int, Bigint);   //支援 1-2-3-obj...
-    bool operator==(const Bigint &) const;
-    bool operator!=(const Bigint &) const;
-    bool operator>(const Bigint &) const;
-    bool operator<(const Bigint &) const;
-    bool operator>=(const Bigint &)const;
-    bool operator<=(const Bigint &)const;
+    bool operator==(const Bigint &) const;  //  obj1 == obj2
+    friend bool operator==(Bigint &, int);  //  obj1 = 1
+    friend bool operator==(int, Bigint &);  //  1 == obj1
+    bool operator!=(const Bigint &) const;  //  obj1 != obj2
+    friend bool operator!=(Bigint &, int);  //  obj1 != 1
+    friend bool operator!=(int, Bigint &);  //  1 != obj1
+    bool operator>(const Bigint &) const;   //  obj1 > obj2
+    bool operator<(const Bigint &) const;   //  obj1 < obj2
+    bool operator>=(const Bigint &)const;   //  obj1 >= obj2
+    bool operator<=(const Bigint &)const;   //  obj1 <= obj2
     
 
     void Combine();
