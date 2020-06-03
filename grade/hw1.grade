@@ -1,0 +1,126 @@
+HW1 成績
+學號 成績 備註
+405410020 93 Linked list 2
+405410061
+58 Linked list 2
+make 失敗(-10)
+java 無法顯示空格(-10)
+debugger 截圖未交(-15)
+405410084 79 Struct 4
+405410100 100 Linked list 1 + .h
+405410116 86 Struct 3
+405410123
+46 Struct 3
+當參數剛好 1 個，即 argc==2，輸出結果有誤(-10)
+沒有 makefile(-10)
+[Java]檔案命名錯誤，應與 class 同名(-5)
+debugger 繳交截圖不正確(-15)
+405420078 93 Linked list 2
+405530032
+50 map 2
+[C++]程式無法在 csie0 順利執行(-20)
+[C++]輸出的順序錯誤(-10)
+[Java]輸出結果不盡正確(-15)
+405530045 93 Linked list 2
+406210003 93 Linked list 2
+406210006
+88 Linked list 2
+Makefile.txt : 有.txt 則無法 make (-5)
+406210027 93 Linked list 2
+406235040 86 Struct 3
+406315017
+63 Linked list 2
+[Java]未完成(-30)
+406410007
+81 Array 3
+[Java] 程式有誤，少了” [ “ (-5)
+406410028 93 Linked list 2
+406410083
+33 Linked list 2
+make 失敗(-10)
+debugger 未附截圖(-15)
+[Java]未交(-35)
+406410092 0 未交
+406410096 93 Linked list 2
+406410114 93 Linked list 2
+406410116 90 Vector 3 + .h
+406415020 95 Class 1 (.h 應只放宣告，實作在.cpp)
+406415028
+95 Class 1 + .h
+[C++]不必列出 argv[0]的內容(-5)
+406520083 93 Linked list 2
+407410002 93 Linked list 2
+407410004
+78 Linked list 2
+debugger 截圖未交(-15)
+407410006 93 Linked list 2
+407410018
+88 以後記得交 readme(-5)
+Linked list 2
+407410019
+88 以後記得交 readme(-5)
+Linked list 2
+407410022
+71 Linked list 2
+debugger (6)未完成 (-2)
+[Java]檔案命名錯誤，應與 class 同名(-5)
+[Java]應輸出 args，結果不符題意(-15)
+407410025 93 Linked list 2
+407410026 93 Linked list 2
+407410027
+88 Linked list 2
+Make clean 沒有清除乾淨(-5)
+407410029 93 Linked list 2
+407410030 93 Linked list 2
+407410034 86 Vector 3
+407410035
+70 Linked list 1
+make 失敗(-10)
+[C++] 程式有誤，多了” _ “ (-5)
+未依照輸入格式讀取字串 (-15)
+407410038 95 Map 2
+407410040 93 Linked list 2
+407410044 95 Linked list 1 + .h (應在 .h 內放宣告)
+407410047 95 Map 2
+407410048 93 Linked list 2
+407410051 93 Linked list 2
+407410053
+76 以後記得交 readme(-5)
+Vector 3
+[Java]檔案命名錯誤，應與 class 同名(-5)
+407410054
+80 Linked list 1 (應在 .h 內放宣告)
+[Java]輸出結果不符題意(-15)
+407410061 93 Linked list 2
+407410063 93 Linked list 2
+407410064
+73 Linked list 2
+[C++]某些輸入(ex: abc)產生嚴重錯誤結果(-20)
+407410065
+88 Linked list 2
+[Java]檔案命名錯誤，應與 class 同名(-5)
+407410073 93 Linked list 2
+407410075
+83 Linked list 2
+Makefile.txt : 有.txt 則無法 make、make clean 失敗
+(-10)
+407410077 93 Linked list 2
+407410081
+88 Linked list 2
+Make clean 失敗(-5)
+407410082 93 Linked list 2
+407410083
+68 Linked list 2
+make 失敗(-10)
+debugger 截圖未交(-15)
+407410084 93 Linked list 2
+407410085 93 Linked list 2
+407410086 86 Array 3
+407410087
+88 Linked list 2
+Make clean 失敗(-5)
+407410088 100 Linked list 1 + .h
+407410090
+71 Array 3
+未依照輸入格式讀取字串(-15)
+407410094 100 Linked list 1 + .h
