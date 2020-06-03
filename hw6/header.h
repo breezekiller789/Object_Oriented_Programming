@@ -18,34 +18,48 @@ void Get_Subject(const char *, char *);
 int rmnewline(char *);
 
 class Student{
-    protected:
+    private:
         char first_name[20];
         char last_name[20];
         char course[10];
-        int English_Grade[4];
-        int History_Grade[3];
-        int Math_Grade[8];
+
+    protected:
+        void init(char *fn, char *ln, char *subject);
 
     public:
-        virtual void info() = 0;
+        void info();
+        virtual int Get_Final_Exam_Grade() = 0;
+        virtual float Get_Final_Average() = 0;
 };
 
 class English:public Student{
+    private:
+        int English_Grade[4];
+
     public:
         English(int *Grades, char *fn, char *ln, char *subject);
-        void info();
+        int Get_Final_Exam_Grade();
+        float Get_Final_Average();
 };
 
 class History:public Student{
+    private:
+        int History_Grade[3];
+
     public:
         History(int *Grades, char *fn, char *ln, char *subject);
-        void info();
+        int Get_Final_Exam_Grade();
+        float Get_Final_Average();
 };
 
 class Math:public Student{
+    private:
+        int Math_Grade[8];
+
     public:
         Math(int *Grades, char *fn, char *ln, char *subject);
-        void info();
+        int Get_Final_Exam_Grade();
+        float Get_Final_Average();
 };
 
 
