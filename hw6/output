@@ -1,50 +1,64 @@
-Bunny,
-Bugs
-Math
-90
-86
-80
-95
-100
-99
-96
-93
-Schmuckatelli,
-Joe
-History
-88
-75
-90
-Dipwart,
-Marvin
-English
-95
-76
-72
-88
-Crack
-Corn,
-Jimmy
-Math
-44
-58
-23
-76
-50
-59
-77
-68
-Kirk,
-James
-T.
-English
-40
-100
-68
-88
-Lewinsky,
-Monica
-History
-60
-72
-78
+6
+first name = Bunny
+last name = Bugs
+subject = Math
+
+==========================
+first name = Schmuckatelli
+last name = Joe
+subject = History
+
+==========================
+first name = Dipwart
+last name = Marvin
+subject = English
+
+==========================
+first name = Crack Corn
+last name = Jimmy
+subject = Math
+
+==========================
+first name = Kirk
+last name = James T.
+subject = English
+
+==========================
+first name = Lewinsky
+last name = Monica
+subject = History
+
+==========================
+cnt = 6
+
+
+============================
+fn = Bunny
+ln = Bugs
+course = Math
+90 86 80 95 100 99 96 93 
+============================
+fn = Schmuckatelli
+ln = Joe
+course = History
+88 75 90 
+============================
+fn = Dipwart
+ln = Marvin
+course = English
+95 76 72 88 
+============================
+fn = Crack Corn
+ln = Jimmy
+course = Math
+44 58 23 76 50 59 77 68 
+============================
+fn = Kirk
+ln = James T.
+course = English
+40 100 68 88 
+============================
+fn = Lewinsky
+ln = Monica
+course = History
+60 72 78 
