@@ -218,7 +218,8 @@ void Get_Last_Names(const char *ptr, char *last_name){
     *qtr = 0;
 }
 
-//  Parse Input然後把資料都個別讀進來
+//  Parse Input然後把資料都個別讀進來，這個function基本上就是用C來實作，因為有
+//  需要用到字串的處理，所以寫起來就是C code
 void Parser(int Num_Students, FILE *fp, Student **list){
     char *line = (char *)malloc(sizeof(char) * MaxLine);
     char *ptr, *qtr;
@@ -227,25 +228,34 @@ void Parser(int Num_Students, FILE *fp, Student **list){
     char subject[10];
     int English_Grade[4], History_Grade[3], Math_Grade[8];
     int cnt=0;
+    //  一次讀一行進來。
     while(fgets(line, MaxLine, fp)){
+        //  以前養成的習慣，讀一行進來，要記得把換行拿掉，然後回傳這個字串的長
+        //  度，就先存起來。
         int len = rmnewline(line);
+
         //  如果一開始就空掉，這行就不要做，不然會有bug。
         if(len == 0){
             continue;
         }
         ptr = line;
 
-        //  拿成績。
+        //  拿成績，看這一行是不是要輸入學生的科目成績，用strstr()來幫下去找看
+        //  看，是不是有存在Math, English, History，有的話就代表這一行是要輸入
+        //  成績的。
         if(strstr(ptr, "Math") || strstr(ptr, "English") || strstr(ptr, "History")){
             Get_Subject(ptr, subject);
             /* printf("subject = %s\n", subject); */
             //  該項是數學成績。
             if(strstr(ptr, "Math")){
+                //  這個while是做防呆，如果Math前面有一堆空格，要略過，不然我後
+                //  面在做字串處理會出問題。
                 while(!isspace(*ptr)){
                     ptr++;
                 }
                 ptr++;
 
+                //  到這邊的時候ptr就會剛剛好指到成績的位置。
                 sscanf(ptr, "%d %d %d %d %d %d %d %d", &Math_Grade[0], &Math_Grade[1],
                         &Math_Grade[2], &Math_Grade[3], &Math_Grade[4], &Math_Grade[5],
                         &Math_Grade[6], &Math_Grade[7]);
