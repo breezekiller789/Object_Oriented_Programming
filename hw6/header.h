@@ -10,26 +10,21 @@
 #define MaxLine 1024
 using namespace std;
 
-
-int Get_First_Names(const char *, char *);
-void Get_Last_Names(const char *, char *);
-void Get_Subject(const char *, char *);
-
-int rmnewline(char *);
-
 class Student{
     private:
-        char first_name[20];
-        char last_name[20];
+        char first_name[21];
+        char last_name[21];
         char course[10];
 
     protected:
         void init(char *fn, char *ln, char *subject);
 
     public:
-        void info();
+        void info(FILE *);
+        char *Get_Course();
         virtual int Get_Final_Exam_Grade() = 0;
         virtual float Get_Final_Average() = 0;
+        virtual char Get_Letter_Grade() = 0;
 };
 
 class English:public Student{
@@ -40,6 +35,7 @@ class English:public Student{
         English(int *Grades, char *fn, char *ln, char *subject);
         int Get_Final_Exam_Grade();
         float Get_Final_Average();
+        char Get_Letter_Grade();
 };
 
 class History:public Student{
@@ -50,6 +46,7 @@ class History:public Student{
         History(int *Grades, char *fn, char *ln, char *subject);
         int Get_Final_Exam_Grade();
         float Get_Final_Average();
+        char Get_Letter_Grade();
 };
 
 class Math:public Student{
@@ -60,7 +57,14 @@ class Math:public Student{
         Math(int *Grades, char *fn, char *ln, char *subject);
         int Get_Final_Exam_Grade();
         float Get_Final_Average();
+        char Get_Letter_Grade();
 };
 
 
+void Export_Result_File(FILE *, Student **, int,char [3][10]);
+void Print_Result(FILE *, Student **, int, const char *);
 void Parser(int, FILE *, Student **);
+int Get_First_Names(const char *, char *);
+void Get_Last_Names(const char *, char *);
+void Get_Subject(const char *, char *);
+int rmnewline(char *);

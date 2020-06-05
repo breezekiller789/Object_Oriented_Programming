@@ -21,7 +21,6 @@ Monica Lewinsky    		78		  71.40			C
 
 ~~~~~~~~~~
 MATH CLASS|
-
 ~~~~~~~~~~
 
 Student Name		Final Exam	Final Avg	Letter Grade

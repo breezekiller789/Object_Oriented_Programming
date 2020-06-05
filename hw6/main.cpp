@@ -4,7 +4,10 @@ using namespace std;
 
 int main(int argc, char *argv[]){
     FILE *fp = fopen("sample.in", "r");
+    FILE *Output_fp = fopen("Output.txt", "w");
+    /* FILE *fp = fopen("input2.txt", "r"); */
     int Num_Students=0, cnt=0;
+    char Courses[3][10] = {"English", "History", "Math"};
     fscanf(fp, "%d", &Num_Students);
     /* printf("%d\n", Num_Students); */
 
@@ -12,15 +15,8 @@ int main(int argc, char *argv[]){
 
     Parser(Num_Students, fp, list);
 
-    //  TODO : 總平均的級分數還沒做, get it done, boy.
-    printf("============================\n");
-    for(int i=0; i<Num_Students; i++){
-        (*(list+i))->info();
-        printf("Final Exam = %d\n", (*(list+i))->Get_Final_Exam_Grade());
-        printf("Final Average = %.2f", (*(list+i))->Get_Final_Average());
-        printf("\n============================\n");
-    }
-
+    //  把結果印到Output_fp裡面。
+    Export_Result_File(Output_fp, list, Num_Students, Courses);
 
     return 0;
 }
