@@ -13,12 +13,15 @@ void Student::init(char *fn, char *ln, char *subject){
 void Student::info(FILE *Output_fp){
     if(strcmp(course, "Math") == 0){
         fprintf(Output_fp, "%s %s\t\t", this->last_name, this->first_name);
+        /* printf("%s %s\t\t", this->last_name, this->first_name); */
     }
     else if(strcmp(course, "English") == 0){
         fprintf(Output_fp, "%s %s\t\t", this->last_name, this->first_name);
+        /* printf("%s %s\t\t", this->last_name, this->first_name); */
     }
     else if(strcmp(course, "History") == 0){
         fprintf(Output_fp, "%s %s\t\t", this->last_name, this->first_name);
+        /* printf("%s %s\t\t", this->last_name, this->first_name); */
     }
 }
 
@@ -30,6 +33,7 @@ English::English(int *Grades, char *fn, char *ln, char *subject){
     init(fn, ln, subject);
     for(int i=0; i<4; i++){
         this->English_Grade[i] = Grades[i];
+        /* printf("%d ", this->English_Grade[i]); */
     }
 }
 
@@ -37,6 +41,7 @@ Math::Math(int *Grades, char *fn, char *ln, char *subject){
     init(fn, ln, subject);
     for(int i=0; i<8; i++){
         this->Math_Grade[i] = Grades[i];
+        /* printf("%d ", this->Math_Grade[i]); */
     }
 }
 
@@ -44,6 +49,7 @@ History::History(int *Grades, char *fn, char *ln, char *subject){
     init(fn, ln, subject);
     for(int i=0; i<3; i++){
         this->History_Grade[i] = Grades[i];
+        /* printf("%d ", this->History_Grade[i]); */
     }
 }
 
@@ -118,9 +124,6 @@ float History::Get_Final_Average(){
 //  數學的Letter Grade
 char English::Get_Letter_Grade(){
     float Final_Avg = this->Get_Final_Average();
-    //  可能會超過一百分，超過一百一樣是A
-    if(Final_Avg > 100)
-        return 'A';
     if(Final_Avg >= 90 && Final_Avg < 100){
         return 'A';
     }
@@ -142,9 +145,6 @@ char English::Get_Letter_Grade(){
 //  數學的Letter Grade
 char Math::Get_Letter_Grade(){
     float Final_Avg = this->Get_Final_Average();
-    //  可能會超過一百分，超過一百一樣是A
-    if(Final_Avg > 100)
-        return 'A';
     if(Final_Avg >= 90 && Final_Avg < 100){
         return 'A';
     }
@@ -166,9 +166,6 @@ char Math::Get_Letter_Grade(){
 //  歷史的Letter Grade
 char History::Get_Letter_Grade(){
     float Final_Avg = this->Get_Final_Average();
-    //  可能會超過一百分，超過一百一樣是A
-    if(Final_Avg > 100)
-        return 'A';
     if(Final_Avg >= 90 && Final_Avg < 100){
         return 'A';
     }
@@ -260,7 +257,7 @@ void Parser(int Num_Students, FILE *fp, Student **list){
     int English_Grade[4], History_Grade[3], Math_Grade[8];
     int cnt=0;
     //  一次讀一行進來。
-    while(fgets(line, MaxLine, fp) != NULL){
+    while(fgets(line, MaxLine, fp)){
         //  以前養成的習慣，讀一行進來，要記得把換行拿掉，然後回傳這個字串的長
         //  度，就先存起來。
         int len = rmnewline(line);
@@ -276,6 +273,7 @@ void Parser(int Num_Students, FILE *fp, Student **list){
         //  成績的。
         if(strstr(ptr, "Math") || strstr(ptr, "English") || strstr(ptr, "History")){
             Get_Subject(ptr, subject);
+            /* printf("subject = %s\n", subject); */
             //  該項是數學成績。
             if(strstr(ptr, "Math")){
                 //  這個while是做防呆，如果Math前面有一堆空格，要略過，不然我後
@@ -317,6 +315,7 @@ void Parser(int Num_Students, FILE *fp, Student **list){
                 *(list+cnt) = new History(History_Grade, first_name, last_name, subject);
                 cnt++;
             }
+            /* printf("\n==========================\n"); */
             continue;
         }
 
@@ -330,6 +329,7 @@ void Parser(int Num_Students, FILE *fp, Student **list){
         Get_Last_Names(ptr, last_name);
 
     }
+    /* printf("cnt = %d\n", cnt); */
 }
 
 //  把學生的姓名，分數都印出來，參數的course代表我現在要印哪一個科目，數學就先
@@ -343,10 +343,14 @@ void Print_Result(FILE *Output_fp, Student **list, int Num_Students, const char 
             fprintf(Output_fp, "%d\t\t  ", (*(list+i))->Get_Final_Exam_Grade());
             fprintf(Output_fp, "%.2f\t\t\t", (*(list+i))->Get_Final_Average());
             fprintf(Output_fp, "%c\n", (*(list+i))->Get_Letter_Grade());
+            /* printf("%d\t\t  ", (*(list+i))->Get_Final_Exam_Grade()); */
+            /* printf("%.2f\t\t\t", (*(list+i))->Get_Final_Average()); */
+            /* printf("%c\n", (*(list+i))->Get_Letter_Grade()); */
         }
     }
 
     fprintf(Output_fp, "\n");
+    /* cout << endl; */
 }
 
 //  把結果都印到檔案Output.txt裡面，我是用fprintf來印，簡單又方便。
@@ -354,12 +358,19 @@ void Export_Result_File(FILE *Output_fp, Student **list, int Num_Students,
         char Courses[3][10]){
     fprintf(Output_fp, "Student Grade Summary\n");
     fprintf(Output_fp, "---------------------\n\n");
+    /* cout << "Student Grade Summary" << endl; */
+    /* cout << "---------------------" << endl << endl; */
 
     fprintf(Output_fp, "~~~~~~~~~~~~~\n"); 
     fprintf(Output_fp, "ENGLISH CLASS|\n");
     fprintf(Output_fp, "~~~~~~~~~~~~~\n\n"); 
     fprintf(Output_fp, "Student Name\t\tFinal Exam\tFinal Avg\tLetter Grade\n");
     fprintf(Output_fp, "--------------------------------------------------------\n");
+    /* cout << "~~~~~~~~~~~~~" << endl; */
+    /* cout << "ENGLISH CLASS|" << endl; */
+    /* cout << "~~~~~~~~~~~~~" << endl << endl; */
+    /* cout << "Student Name\t\tFinal Exam\tFinal Avg\tLetter Grade" << endl; */
+    /* cout << "--------------------------------------------------------" << endl; */
 
     //  輸出英文課的所有同學姓名、成績。
     Print_Result(Output_fp, list, Num_Students, Courses[0]);
@@ -369,6 +380,11 @@ void Export_Result_File(FILE *Output_fp, Student **list, int Num_Students,
     fprintf(Output_fp, "~~~~~~~~~~~~~\n\n"); 
     fprintf(Output_fp, "Student Name\t\tFinal Exam\tFinal Avg\tLetter Grade\n");
     fprintf(Output_fp, "--------------------------------------------------------\n");
+    /* cout << "~~~~~~~~~~~~~" << endl; */
+    /* cout << "HISTORY CLASS|" << endl; */
+    /* cout << "~~~~~~~~~~~~~" << endl << endl; */
+    /* cout << "Student Name\t\tFinal Exam\tFinal Avg\tLetter Grade" << endl; */
+    /* cout << "--------------------------------------------------------" << endl; */
 
     //  輸出歷史課的所有同學姓名、成績。
     Print_Result(Output_fp, list, Num_Students, Courses[1]);
@@ -378,6 +394,11 @@ void Export_Result_File(FILE *Output_fp, Student **list, int Num_Students,
     fprintf(Output_fp, "~~~~~~~~~~\n\n"); 
     fprintf(Output_fp, "Student Name\t\tFinal Exam\tFinal Avg\tLetter Grade\n");
     fprintf(Output_fp, "--------------------------------------------------------\n");
+    /* cout << "~~~~~~~~~~" << endl; */
+    /* cout << "MATH CLASS|\n" << endl; */
+    /* cout << "~~~~~~~~~~" << endl << endl; */
+    /* cout << "Student Name\t\tFinal Exam\tFinal Avg\tLetter Grade" << endl; */
+    /* cout << "--------------------------------------------------------" << endl; */
 
     //  輸出數學課的所有同學姓名、成績。
     Print_Result(Output_fp, list, Num_Students, Courses[2]);

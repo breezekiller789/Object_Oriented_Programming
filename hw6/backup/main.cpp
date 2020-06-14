@@ -5,9 +5,11 @@ using namespace std;
 int main(int argc, char *argv[]){
     FILE *fp = fopen("sample.in", "r");
     FILE *Output_fp = fopen("Output.txt", "w");
-    int Num_Students=0;
+    /* FILE *fp = fopen("input2.txt", "r"); */
+    int Num_Students=0, cnt=0;
     char Courses[3][10] = {"English", "History", "Math"};
     fscanf(fp, "%d", &Num_Students);
+    /* printf("%d\n", Num_Students); */
 
     Student **list = new Student *[Num_Students];
 

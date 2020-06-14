@@ -382,3 +382,9 @@ void Export_Result_File(FILE *Output_fp, Student **list, int Num_Students,
     //  輸出數學課的所有同學姓名、成績。
     Print_Result(Output_fp, list, Num_Students, Courses[2]);
 }
+
+void usage(){
+    cout << "Please add input file and output file name like so" << endl
+         << "./hw6.exe input.txt output.txt" << endl;
+
+}

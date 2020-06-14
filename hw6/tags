@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+English	func.cpp	/^English::English(int *Grades, char *fn, char *ln, char *subject){$/;"	f	class:English
+English	header.h	/^class English:public Student{$/;"	c
+English_Grade	header.h	/^        int English_Grade[4];$/;"	m	class:English
+Export_Result_File	func.cpp	/^void Export_Result_File(FILE *Output_fp, Student **list, int Num_Students,$/;"	f
+Get_Course	func.cpp	/^char *Student::Get_Course(){$/;"	f	class:Student
+Get_Final_Average	func.cpp	/^float English::Get_Final_Average(){$/;"	f	class:English
+Get_Final_Average	func.cpp	/^float History::Get_Final_Average(){$/;"	f	class:History
+Get_Final_Average	func.cpp	/^float Math::Get_Final_Average(){$/;"	f	class:Math
+Get_Final_Exam_Grade	func.cpp	/^int English::Get_Final_Exam_Grade(){$/;"	f	class:English
+Get_Final_Exam_Grade	func.cpp	/^int History::Get_Final_Exam_Grade(){$/;"	f	class:History
+Get_Final_Exam_Grade	func.cpp	/^int Math::Get_Final_Exam_Grade(){$/;"	f	class:Math
+Get_First_Names	func.cpp	/^int Get_First_Names(const char *ptr, char *first_name){$/;"	f
+Get_Last_Names	func.cpp	/^void Get_Last_Names(const char *ptr, char *last_name){$/;"	f
+Get_Letter_Grade	func.cpp	/^char English::Get_Letter_Grade(){$/;"	f	class:English
+Get_Letter_Grade	func.cpp	/^char History::Get_Letter_Grade(){$/;"	f	class:History
+Get_Letter_Grade	func.cpp	/^char Math::Get_Letter_Grade(){$/;"	f	class:Math
+Get_Subject	func.cpp	/^void Get_Subject(const char *ptr, char *subject){$/;"	f
+History	func.cpp	/^History::History(int *Grades, char *fn, char *ln, char *subject){$/;"	f	class:History
+History	header.h	/^class History:public Student{$/;"	c
+History_Grade	header.h	/^        int History_Grade[3];$/;"	m	class:History
+Math	func.cpp	/^Math::Math(int *Grades, char *fn, char *ln, char *subject){$/;"	f	class:Math
+Math	header.h	/^class Math:public Student{$/;"	c
+Math_Grade	header.h	/^        int Math_Grade[8];$/;"	m	class:Math
+MaxLine	header.h	/^#define MaxLine /;"	d
+Parser	func.cpp	/^void Parser(int Num_Students, FILE *fp, Student **list){$/;"	f
+Print_Result	func.cpp	/^void Print_Result(FILE *Output_fp, Student **list, int Num_Students, const char *course){$/;"	f
+Student	header.h	/^class Student{$/;"	c
+course	header.h	/^        char course[10];$/;"	m	class:Student
+first_name	header.h	/^        char first_name[21];$/;"	m	class:Student
+info	func.cpp	/^void Student::info(FILE *Output_fp){$/;"	f	class:Student
+init	func.cpp	/^void Student::init(char *fn, char *ln, char *subject){$/;"	f	class:Student
+last_name	header.h	/^        char last_name[21];$/;"	m	class:Student
+main	main.cpp	/^int main(int argc, char *argv[]){$/;"	f
+rmnewline	func.cpp	/^int rmnewline(char *line){$/;"	f

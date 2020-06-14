@@ -68,5 +68,6 @@ int Get_First_Names(const char *, char *);
 void Get_Last_Names(const char *, char *);
 void Get_Subject(const char *, char *);
 int rmnewline(char *);
+void usage();
 
 
